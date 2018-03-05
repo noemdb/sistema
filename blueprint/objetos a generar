@@ -1,0 +1,38 @@
+Objetos a generar:
+F1:
+	-. DIRCP:
+		*. Credencial de designación para la COMCP (CREDENTCOD).
+		*. Oficio de Notificación al ENTE de la actuación fisca (OFNOTENTCOD)
+		*. Memorando de Planeación (MEMOPLANCOD)
+		*. Programa de Trabajo (PDTCOD)
+
+F2:
+	-. DIRCP: 
+		
+		*. Solicitud de Prorrogas.
+	-. COMCP: 
+		*. Acta de instalación (ACTINSCOD)
+		*. Solicitudes de Recaudos (SOLRECCOD)
+		*. Informe preliminar
+		*. Solicitudes de prorrogas
+		*. Acta de Hacer Constar” y/o Acta Fiscal (ACTHCAF)
+		*. Cédulas de trabajo (CEDTRACOD)
+		*. Papeles de trabajo (PAPTRACOD)
+		*. Evidencias (EVIDENCOD)
+		*. Cédulas de hallazgos (CEDHALCOD)
+		*. Conclusiones Preliminares (CONPRECOD)
+		*. Observaciones de la discusión de las CONIPCOD (OBSCONIPCOD)		
+
+F3:
+
+	-. COMCP
+		*. Observaciones y hallazgos conclusiones del Informe Preliminar (OHCIPCOD)
+		*. Sintesis digital del Informe Preliminar (SDIPCOD)
+		*. Oficio de remisión del Informe Preliminar (OFREIPCOD)
+		*. Sintesis Digital del informe definitivo (INFDEFCOD)
+
+	-. DIRCP
+		*. Oficio de recepsión del ENTE firmado y sellado (OFREENFSCOD)
+		*. Descargo de las Observaciones (DESOBSCOD)
+		*. Oficio de remisión del Informe Definitivo (OFREIDCOD)
+

@@ -1,0 +1,18 @@
+F1:
+	-. DIRCP:
+		*. Generación de la CREDENTCOD -> (COMCP) :: (Evento: (ACF1N5) Registro de la CREDENTCOD)
+		*. Generación de OFNOTENTCOD -> (CONTRA, COMCP) :: (Evento: (ACF1N6) Generación OFNOTENTCOD)
+		*. Generación del MEMOPLAN -> (COMCP) :: (Evento: (ACF1N20) Generación de la CREDENTCOD)
+	-. COMCP
+		*. Finalización de Fase 1 -> DIRCP, CONTRA, CORCP :: Evento: ACF1N29
+		
+
+
+F2:
+	-. COMCP:
+		*. Registro de las OBSCONPRECOD -> (CORCP, ) :: (Evento: (ACF1N20) Generación de la CREDENTCOD)
+		*. Finalización de Fase 2 -> DIRCP, CONTRA, CORCP :: Evento: ACF2N10
+
+F3:
+	-. COMCP
+		*. Finalización de Fase 3 -> DIRCP, CONTRA, CORCP :: Evento: ACF3N31
