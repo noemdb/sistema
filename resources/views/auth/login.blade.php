@@ -6,7 +6,7 @@
 
         <div class="row">
 
-            <div class="col-md-8 offset-md-2">
+            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xg-2 offset-xg-5">
                 
                 @component('elements.widgets.panel')
                     @slot ('panelTitle', 'Datos de Acceso')
@@ -14,46 +14,57 @@
                     @slot ('panelBody')
 
                         <form class="form-signin" method="POST" action="{{ route('login') }}">
+
                             {{ csrf_field() }}
-                            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 
-                                <label for="username" class="control-label">Nombre de Usuario</label>
 
-                                <div class="form-label-group">
-                                  {{-- <span class="input-group-addon"><i class="fas fa-user"></i>&nbsp;</span> --}}
-                                  <input type="text" class="form-control" id="username" name="username" placeholder="Nombre de Usuario" aria-describedby="basic-addon1" value="{{ old('username') }}" required>
+                            <div class="input-group{{ $errors->has('username') ? ' has-danger' : '' }}">
+
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">@</span>
                                 </div>
+
+                                <input type="text" class="form-control" id="inputEmail" name="username" placeholder="Nombre de Usuario" aria-describedby="basic-addon1" value="{{ old('username') }}" required>
 
                                 @if ($errors->has('username'))
 
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('username') }}</strong>
+                                        </span>
+                                    </div>
 
                                 @endif
-
-                            </div>
-
-                            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            
-                                <label for="password" class="control-label">Contraseña</label>
                                 
-                                <div class="form-label-group">
-                                    {{-- <span class="input-group-addon"><i class="fas fa-key"></i>&nbsp;</span> --}}
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" aria-describedby="basic-addon1" required>
+                            </div>
+                            <br>
+                            <div class="input-group{{ $errors->has('password') ? ' has-error' : '' }}">
+
+                                <div class="input-group-prepend">
+                                  <span class="input-group-text">
+                                    <i class="fas fa-key"></i>
+                                  </span>
                                 </div>
 
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" aria-describedby="basic-addon1" required>
+
                                 @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
+
+                                    <div class="invalid-feedback" style="width: 100%;">
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('password') }}</strong>
+                                        </span>
+                                    </div>
+
                                 @endif
                                 
                             </div>
 
-                            <div class="form-group">
+                            <br>
+
+                            {{-- <div class="form-group"> --}}
                                 
-                                <div class="checkbox" align="right">
+                                <div class="checkbox mb-3" align="right">
                                     <label>
                                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
                                     </label>
@@ -70,7 +81,7 @@
                                     Olvidaste tu Contraseña?
                                 </a>
                                 
-                            </div>
+                            {{-- </div> --}}
 
                         </form>
 

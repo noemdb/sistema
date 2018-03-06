@@ -21,7 +21,7 @@
     <div id="app">
 
 
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-md navbar-light md-light">
           {{-- <a class="navbar-brand" href="#">Navbar</a> --}}
 
             <a class="navbar-brand" href="{{ url('/') }}">
@@ -49,7 +49,7 @@
                         @else
 
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-user"></i>
+                                {{-- <i class="fas fa-user"></i> --}}
                                 {{ Auth::user()->name }} <span class="caret"></span>Usuario
                             </a>
 
