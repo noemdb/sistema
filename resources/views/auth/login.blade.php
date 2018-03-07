@@ -2,98 +2,60 @@
 
 @section ('content')
 
-    {{-- <div class="container"> --}}
+    <form class="form-signin" method="POST" action="{{ route('login') }}">
 
-        <div class="row">
+        {{ csrf_field() }}
 
-            <div class="col-sm-8 offset-sm-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xg-2 offset-xg-5">
-                
-                @component('elements.widgets.panel')
-                    @slot ('panelTitle', 'Datos de Acceso')
-                    @slot ('class','info')
-                    @slot ('panelBody')
+        <center>
 
-                        <form class="form-signin" method="POST" action="{{ route('login') }}">
+            <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
 
-                            {{ csrf_field() }}
+            <h2 class="form-signin-heading">Datos de Acceso</h2>
 
+        </center>
 
-                            <div class="input-group{{ $errors->has('username') ? ' has-danger' : '' }}">
+        <label for="inputUser" class="sr-only">Nombre de Usuario</label>
+        <input type="text" id="inputUser" name="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" placeholder="Nombre de Usuario" value="{{ old('username') }}" required autofocus>
+        
+        @if ($errors->has('username'))
 
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">@</span>
-                                </div>
+            <span class="invalid-feedback">
+                <strong>{{ $errors->first('username') }}</strong>
+            </span>
 
-                                <input type="text" class="form-control" id="inputEmail" name="username" placeholder="Nombre de Usuario" aria-describedby="basic-addon1" value="{{ old('username') }}" required>
+        @endif
 
-                                @if ($errors->has('username'))
-
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('username') }}</strong>
-                                        </span>
-                                    </div>
-
-                                @endif
-                                
-                            </div>
-                            <br>
-                            <div class="input-group{{ $errors->has('password') ? ' has-error' : '' }}">
-
-                                <div class="input-group-prepend">
-                                  <span class="input-group-text">
-                                    <i class="fas fa-key"></i>
-                                  </span>
-                                </div>
-
-                                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" aria-describedby="basic-addon1" required>
-
-                                @if ($errors->has('password'))
-
-                                    <div class="invalid-feedback" style="width: 100%;">
-                                        <span class="help-block">
-                                            <strong>{{ $errors->first('password') }}</strong>
-                                        </span>
-                                    </div>
-
-                                @endif
-                                
-                            </div>
-
-                            <br>
-
-                            {{-- <div class="form-group"> --}}
-                                
-                                <div class="checkbox mb-3" align="right">
-                                    <label>
-                                        <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
-                                    </label>
-                                </div>
-
-                                @component('elements.widgets.button')
-                                    @slot('type','submit')
-                                    @slot('value','Ingresar')
-                                    @slot('class','primary btn-block')
-                                @endcomponent
-                                
-                                <br>
-                                <a class="btn-link" href="{{ route('password.request') }}">
-                                    Olvidaste tu Contraseña?
-                                </a>
-                                
-                            {{-- </div> --}}
-
-                        </form>
-
-                    @endslot
-
-                @endcomponent
+        <label for="inputPassword" class="sr-only">Contraseña</label>
+        <input type="password" id="inputPassword" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Contraseña" required>
 
 
+        @if ($errors->has('password'))
+
+            <div class="invalid-feedback" style="width: 100%;">
+                <span class="help-block">
+                    <strong>{{ $errors->first('password') }}</strong>
+                </span>
             </div>
 
+        @endif
+                      
+        <div class="checkbox mb-2" align="right">
+            <label>
+                <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
+            </label>
         </div>
 
-    {{-- </div> --}}
+        @component('elements.widgets.button')
+            @slot('type','submit')
+            @slot('value','Ingresar')
+            @slot('class','primary btn-block')
+        @endcomponent
+        
+        <br>
+        <a class="btn-link" href="{{ route('password.request') }}">
+            Olvidaste tu Contraseña?
+        </a>
+
+    </form>
 
 @endsection

@@ -11,38 +11,26 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Styles -->
-    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
     <link href="{{ asset('vendor/bootstrap/4.0.0/css/bootstrap.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
     <script defer src="{{ asset('vendor/fontawesome/5.0.8/svg-with-js/js/fontawesome-all.js') }}"></script>
 
 </head>
 <body>
 
-    <div id="app" class="flex-center position-ref full-height">
-
-        @if (Route::has('login'))
-            <div class="top-right links">
-                @auth
-                    <a href="{{ url('/home') }}">Inicio</a>
-                @else
-                    <a href="{{ url('/') }}">Inicio</a>
-                @endauth
-            </div>
-        @endif 
-       
-
-        <div class="container">
-
-            @yield('content')
-
+    @if (Route::has('login'))
+        <div class="top-right links">
+            @auth
+                <a href="{{ url('/home') }}">Inicio</a>
+            @else
+                <a href="{{ url('/') }}">Inicio</a>
+            @endauth
         </div>
-        
-    </div>
+    @endif 
+
+    @yield('content')
 
     <!-- Scripts -->
-
     <script src="{{ asset('vendor/jquery/3.2.1/slim/jquery.js') }}"></script>
     <script src="{{ asset('vendor/ajax/popper/1.12.9/js/popper.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/4.0.0/js/bootstrap.js') }}"></script>
