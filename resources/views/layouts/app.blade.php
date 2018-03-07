@@ -13,6 +13,7 @@
     <!-- Styles -->
     <link href="{{ asset('vendor/bootstrap/4.0.0/css/bootstrap.css') }}" rel="stylesheet">
 
+    <!-- javascript -->
     <script defer src="{{ asset('vendor/fontawesome/5.0.8/svg-with-js/js/fontawesome-all.js') }}"></script>
 
 </head>
@@ -47,39 +48,78 @@
 
                         @else
 
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                {{-- <i class="fas fa-user"></i> --}}
-                                {{ Auth::user()->name }} <span class="caret"></span>Usuario
-                            </a>
 
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li class="nav-item">
 
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>
 
-                                <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <i class="fas fa-sign-out-alt"></i>
-                                    Salir
-                                </a>
+                                <div class="dropdown">
+                                  
+                                  <a href="#" class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Usuario
+                                  </a>
 
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                    @csrf
-                                </form>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
 
-                            </div>
+                                        <div class="dropdown-item">
+                                            <i class="fas fa-user"></i>
+                                            {{ Auth::user()->username }}
+                                        </div>
+                                        <div class="dropdown-divider"></div>
+
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-cog"></i>
+                                            Configuraciones
+                                        </a>
+
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                            Dashboard
+                                        </a>
+
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-address-card"></i>
+                                            Perfil
+                                        </a>
+
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-address-book"></i>
+                                            Rol
+                                        </a>
+
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-tasks"></i>
+                                            Actividades
+                                        </a>
+
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fas fa-comment"></i>
+                                            Mensajes
+                                        </a>
+
+                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <i class="fas fa-sign-out-alt"></i>
+                                            Salir
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                            </li>
 
                         @endguest
 
-                    </li>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a class="nav-link" href="#">Ayuda</a>
                     </li>
+                    {{-- 
                     <li class="nav-item">
                         <a class="nav-link disabled" href="#">Disabled</a>
-                    </li>
+                    </li> 
+                    --}}
 
                 </ul>
 
@@ -89,17 +129,19 @@
                 </form>
 
             </div>
+
         </nav>
 
 
         <main class="py-4">
+
             @yield('content')
+
         </main>
         
     </div>
 
     <!-- Scripts -->
-
     <script src="{{ asset('vendor/jquery/3.2.1/slim/jquery.js') }}"></script>
     <script src="{{ asset('vendor/ajax/popper/1.12.9/js/popper.js') }}"></script>
     <script src="{{ asset('vendor/bootstrap/4.0.0/js/bootstrap.js') }}"></script>
