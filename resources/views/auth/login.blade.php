@@ -14,35 +14,44 @@
 
         </center>
 
-        <label for="inputUser" class="sr-only">Nombre de Usuario</label>
-        <input type="text" id="inputUser" name="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" placeholder="Nombre de Usuario" value="{{ old('username') }}" required autofocus>
-        
-        @if ($errors->has('username'))
+        <div class="form-label-group">
+            <input type="text" id="inputUser" name="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" placeholder="Nombre de Usuario" value="{{ old('username') }}" required autofocus>
+            <label for="inputUser">Nombre de Usuario</label>
+            
+            
+            @if ($errors->has('username'))
 
-            <span class="invalid-feedback">
-                <strong>{{ $errors->first('username') }}</strong>
-            </span>
-
-        @endif
-
-        <label for="inputPassword" class="sr-only">Contraseña</label>
-        <input type="password" id="inputPassword" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Contraseña" required>
-
-
-        @if ($errors->has('password'))
-
-            <div class="invalid-feedback" style="width: 100%;">
-                <span class="help-block">
-                    <strong>{{ $errors->first('password') }}</strong>
+                <span class="invalid-feedback">
+                    <strong>{{ $errors->first('username') }}</strong>
                 </span>
-            </div>
 
-        @endif
+            @endif
+
+        </div>
+
+        <div class="form-label-group">
+
+            <input type="password" id="inputPassword" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" placeholder="Contraseña" required>
+            <label for="inputPassword">Contraseña</label>
+
+            @if ($errors->has('password'))
+
+                <div class="invalid-feedback" style="width: 100%;">
+                    <span class="help-block">
+                        <strong>{{ $errors->first('password') }}</strong>
+                    </span>
+                </div>
+
+            @endif
+
+        </div>
                       
         <div class="checkbox mb-2" align="right">
+
             <label>
                 <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordarme
             </label>
+            
         </div>
 
         @component('elements.widgets.button')

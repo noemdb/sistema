@@ -54,7 +54,7 @@
 
                                 <div class="dropdown">
                                   
-                                  <a href="#" class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                  <a href="#" class="nav-link dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Usuario
                                   </a>
 
@@ -134,6 +134,7 @@
 
 
         <main class="py-4">
+        {{-- <main role="main" class="container"> --}}
 
             @yield('content')
 
