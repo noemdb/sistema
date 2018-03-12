@@ -1,24 +1,25 @@
-@extends('layouts.app')
+@extends('layouts.app_home')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-10">
-            <div class="card">
-                <div class="card-header">Inicio</div>
 
-                <div class="card-body">
+      <main role="main" class="inner cover">
+        
+        <h1 class="cover-heading">Inicio</h1>
 
-                    @if (session('status'))
-                        <div class="alert alert-success">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+        <p class="lead">Sistema desarrollado en Laravel 5.6</p>
+        
+        <p class="lead">
+          <a href="#" class="btn btn-lg btn-secondary">Leer mas</a>
+        </p>
 
-                    You are logged in! {{ Auth::user()->username }}
-                </div>
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
             </div>
-        </div>
-    </div>
-</div>
+        @endif
+
+        Sesión iniciada correctamete! {{ Auth::user()->username }}
+
+      </main>
+
 @endsection
