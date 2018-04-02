@@ -68,3 +68,7 @@ Pull is not possible because you have unmerged files.
 git fetch origin
 git reset --hard origin/master
 git pull
+
+
+If you want to turn this warning off, type this in the git command line
+git config core.autocrlf true

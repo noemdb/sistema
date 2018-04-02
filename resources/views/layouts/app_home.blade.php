@@ -17,35 +17,26 @@
     {{-- <script defer src="{{ asset('vendor/fontawesome/5.0.8/svg-with-js/js/fontawesome-all.js') }}"></script> --}}
 
 </head>
-<body>
-
-
 
  <body class="text-center">
 
+
+
     <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-
       <header class="masthead mb-auto">
-
         <div class="inner">
-
           <h3 class="masthead-brand">{{ config('app.name', 'Laravel') }}</h3>
-
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="#">Inicio</a>
-
             <a class="nav-link" href="#">Contacto</a>
-
+            <a class="nav-link" href="#">Ayuda</a>
             <a class="nav-link" href="#">
                 @component('layouts.partials.home.navbar')
                 @endcomponent
             </a>
-            
           </nav>
-
         </div>
-
-      </header>
+      </header>     
 
       @yield('content')
 
@@ -55,8 +46,6 @@
         </div>
       </footer>
     </div>
-
-
 
 
     {{--
