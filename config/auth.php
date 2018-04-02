@@ -71,10 +71,6 @@ return [
             'model' => App\User::class,
         ],
 
-        'profiles' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\sys\Profile::class,
-        ],
     ],
 
     /*

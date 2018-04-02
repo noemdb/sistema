@@ -23,6 +23,7 @@ $factory->define(App\User::class, function (Faker $faker) {
     return [
         'username' => $faker->unique()->userName,
         'password' => $password ?: $password = bcrypt('secret'),
+        'email' => $faker->unique()->safeEmail,
         'is_active' => array_rand($is_active,1),
         'last_login_at' => $faker->dateTimeBetween('2017-01-01',Carbon::now()),
         'last_loginout_at' => $faker->dateTimeBetween('2017-01-01',Carbon::now()),

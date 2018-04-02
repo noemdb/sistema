@@ -15,6 +15,7 @@ class UsersAdminTableSeeder extends Seeder
         $id = DB::table('users')->insertGetId([
             'username' => "admin",
             'password' => $password ?: $password = bcrypt('admin'),
+            'email' => "admin@admin.com",
             'is_active' => 'Activo',
             'created_at'=> "20000101",
             'last_login_at' => "20000101",
@@ -26,7 +27,6 @@ class UsersAdminTableSeeder extends Seeder
             'firstname' => "Administrador",
             'lastname' => "del Sistema",
             'url_img' => "images/avatar/default_user_admin.png",
-            'email' => "admin@admin.com",
             'user_id' => $id,
             'created_at' => '2000-01-01',
         ]);
