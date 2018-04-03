@@ -10,19 +10,16 @@ a:hover {
 }
 
 /* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #eee;
-  border: .05rem solid #eee;
-}
+/*.btn-secondary,*/
+/*.btn-secondary:hover,*/
+/*.btn-secondary:focus {*/
+  /*color: #333;*/
+  /*text-shadow: none;*/  /*Prevent inheritance from `body`*/ 
+  /*background-color: #eee;*/
+  /*border: .05rem solid #eee;*/
+/*}*/
 
-
-/*
- * Base structure
- */
+/* Base structure */
 
 html,
 body {
@@ -31,11 +28,6 @@ body {
 }
 
 body {
-  /*display: -ms-flexbox;*/
-  /*display: -webkit-box;*/
-  /*display: flex;*/
-  /*-ms-flex-pack: center;*/
-  /*-webkit-box-pack: center;*/
   justify-content: center;
   color: #333;
   /*text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);*/
@@ -47,10 +39,7 @@ body {
   min-width: 32em;
 }
 
-
-/*
- * Header
- */
+/* Header */
 .masthead {
   margin-bottom: 2rem;
 }
@@ -90,10 +79,7 @@ body {
   }
 }
 
-
-/*
- * Cover
- */
+/* Cover */
 .cover {
   padding: 0 1.5rem;
 }
@@ -102,10 +88,7 @@ body {
   font-weight: 700;
 }
 
-
-/*
- * Footer
- */
+/* Footer */
 .mastfoot {
   color: rgba(80, 80, 80, .5);
 }
