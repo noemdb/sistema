@@ -15,7 +15,7 @@
         </center>
 
         <div class="form-label-group">
-            <input type="text" id="inputUser" name="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" placeholder="Nombre de Usuario" value="{{ old('username') }}" required autofocus>
+            <input type="text" id="inputUser" name="username" class="form-control{{ $errors->has('username') ? ' is-invalid' : '' }}" placeholder="Nombre de Usuario" value="{{ old('username') }}" required>
             <label for="inputUser">Nombre de Usuario</label>
             
             
