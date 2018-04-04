@@ -12,7 +12,7 @@ class ProfilesTableSeeder extends Seeder
     public function run()
     {
         //
-        for ($i=0; $i < 10; $i++) { 
+        for ($i=0; $i < 1; $i++) { 
             factory(App\Models\sys\Profile::class)->times(1)->create();
         }
         
