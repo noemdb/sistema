@@ -32,7 +32,7 @@
 
             <h3 class="masthead-brand">{{ config('app.name', 'Laravel') }}</h3>
           
-            @component('layouts.partials.home.navbar')
+            @component('layouts.partials.navbar.home')
                 {{--  --}}
                 {{--  --}}
             @endcomponent
@@ -46,8 +46,11 @@
       <footer class="mastfoot mt-auto">
         <div class="inner">
           <p>
-            Desarrollado por <a href="https://noemdb.com/">NoeMDB</a>, TW <a href="https://twitter.com/NoeMDB">@NoeMDB</a>.<br>
-            <span class="text-muted">Sistema desarrollado en Laravel 5.6</span>
+            <smal class="text-info font-weight-bold">
+                Desarrollado por <a href="https://noemdb.com/">NoeMDB</a> TW <a href="https://twitter.com/NoeMDB">@NoeMDB</a>
+            </smal>
+            <br>
+            <smal class="text-laravel font-weight-bold">Sistema desarrollado en Laravel 5.6</smal>
           </p>
         </div>
       </footer>

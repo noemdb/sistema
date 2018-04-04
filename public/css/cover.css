@@ -36,7 +36,7 @@ body {
 
 .cover-container {
   max-width: 42em;
-  min-width: 32em;
+  /*min-width: 32em;*/
 }
 
 /* Header */
@@ -91,4 +91,8 @@ body {
 /* Footer */
 .mastfoot {
   color: rgba(80, 80, 80, .5);
+}
+
+.text-laravel{
+  color: #f4645f;
 }
