@@ -18,10 +18,12 @@
         @endif
 
         <p class="lead mt-4">
+
           <a href="#" class="btn btn-sm btn-info font-weight-bold">
             <i class="fas fa-info-circle"></i>
             Conoce más...
           </a>
+          
         </p>
 
       </main>
