@@ -50,7 +50,7 @@
                 Desarrollado por <a href="https://noemdb.com/">NoeMDB</a> TW <a href="https://twitter.com/NoeMDB">@NoeMDB</a>
             </smal>
             <br>
-            <smal class="text-laravel font-weight-bold">Sistema desarrollado en Laravel 5.6</smal>
+            <smal class="text-laravel font-weight-bold">Laravel 5.6</smal>
           </p>
         </div>
       </footer>

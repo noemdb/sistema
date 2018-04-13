@@ -23,7 +23,7 @@
             <i class="fas fa-info-circle"></i>
             Conoce más...
           </a>
-          
+
         </p>
 
       </main>

@@ -3,7 +3,7 @@
     Configuraciones
 </a>
 
-<a class="dropdown-item" href="#">
+<a class="dropdown-item" href="{{ url('/') }}/dashboard">
     <i class="fas fa-tachometer-alt text-success"></i>
     Dashboard
 </a>
